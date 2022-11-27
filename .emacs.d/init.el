@@ -384,6 +384,12 @@
   (web-mode-enable-current-element-highlight t)
   (web-mode-enable-current-column-highlight t))
 
+;; Have number navigation in eww.
+(use-package eww-lnum
+  :init (require 'eww)
+
+  :bind (:map eww-mode-map ("f" . eww-lnum-follow)))
+
 
 ;;;-----------------------------------------------------------------------------
 ;;; Tab and spaces handling.
