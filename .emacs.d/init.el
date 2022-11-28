@@ -390,6 +390,10 @@
 
   :bind (:map eww-mode-map ("f" . eww-lnum-follow)))
 
+;; Have tmux-like zoom ability for frames.
+(use-package zoom-window
+  :bind (("C-x z" . zoom-window-zoom)))
+
 
 ;;;-----------------------------------------------------------------------------
 ;;; Tab and spaces handling.
