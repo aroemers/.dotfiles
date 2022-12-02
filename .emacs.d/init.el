@@ -268,7 +268,10 @@
 ;; Browse through the undo tree, using C-x u
 (use-package undo-tree
   :config
-  (global-undo-tree-mode))
+  (global-undo-tree-mode)
+
+  :custom
+  (undo-tree-auto-save-history nil))
 
 ;; Show what has changed since the last commit in a file.
 (use-package git-gutter
