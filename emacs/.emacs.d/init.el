@@ -124,12 +124,12 @@
   :hook
   (clojure-mode . paredit-mode))
 
-;; Add a simple REPL for Clojure
-(use-package inf-clojure
+;; Add a REPL and more.
+(use-package cider
   ;; Load when necessary
   :defer t)
 
-;; Add completion support for Clojure through company (used by eglot)
+;; Add completion support for Clojure through company (used by eglot, cider)
 (use-package company
   :hook
   ((clojure-mode . company-mode)
