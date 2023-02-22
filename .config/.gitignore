@@ -1,7 +1,0 @@
-# Ignore everything by default...
-/*
-
-# Except...
-!.gitignore
-!atuin/
-!bat/
