@@ -45,6 +45,9 @@ brew "rbenv"
 brew "readline"
 brew "rlwrap"
 
+# Install symlinks structures, e.g. dotfiles
+brew "stow"
+
 # Summary of CLI tool usage
 brew "tldr"
 
