@@ -81,6 +81,11 @@ done
 export PATH="$HOME/bin:$PATH"
 
 
+## Don't send analytics with brew
+
+export HOMEBREW_NO_ANALYTICS="true"
+
+
 ## Uncomment line below and line at top of this file to enable profiling
 
 # zprof
