@@ -86,6 +86,10 @@ export PATH="$HOME/bin:$PATH"
 export HOMEBREW_NO_ANALYTICS="true"
 
 
+## Fix GPG "inappropriate ioctl for device"
+export GPG_TTY=$(tty)
+
+
 ## Uncomment line below and line at top of this file to enable profiling
 
 # zprof
