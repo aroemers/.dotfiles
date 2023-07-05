@@ -90,6 +90,13 @@ export HOMEBREW_NO_ANALYTICS="true"
 export GPG_TTY=$(tty)
 
 
+## Simple notification for long running tasks
+
+function nd() {
+    osascript -e "display notification \"Your task $1 is done\" with title \"Task done\" sound name \"Glass\""
+}
+
+
 ## Uncomment line below and line at top of this file to enable profiling
 
 # zprof
