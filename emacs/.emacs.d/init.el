@@ -49,6 +49,7 @@
   (load-theme 'modus-vivendi t)
   (menu-bar-mode -1)			; hide menu bar
   (recentf-mode t)			; remember recently opened files
+  (savehist-mode t)			; save history of commands
   (show-paren-mode t)			; highlight matching parens
 
   (when window-system
