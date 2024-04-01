@@ -1,8 +1,8 @@
 ;;;; Emacs setup by Arnout.
 ;;;;
 ;;;; It uses as much as is provided since Emacs 29.1 (like
-;;;; use-package, project, modus-vivendi theme, eglot) with a few
-;;;; extra conveniences.
+;;;; use-package, project, modus themes, eglot) with a few extra
+;;;; conveniences.
 ;;;;
 ;;;; Programming support is setup for Clojure and Scala.
 
@@ -53,9 +53,10 @@
   (show-paren-mode t)			; highlight matching parens
 
   (when window-system
-    (tool-bar-mode -1)			; hide tool bar
     (scroll-bar-mode -1)		; hide scroll bar
-    (toggle-frame-maximized))		; maximize frame
+    (set-face-font 'default "SF Mono 15") ; set font and size
+    (toggle-frame-maximized)		; maximize frame
+    (tool-bar-mode -1))			; hide tool bar
 
   :custom
   (inhibit-startup-screen t)		; no emacs startup buffer
