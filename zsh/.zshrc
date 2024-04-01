@@ -63,8 +63,7 @@ bindkey '^r' _atuin_search_widget
 
 ## Aliases
 
-# Install exa using brew
-alias ll='exa -l --git'
+alias ll='eza -l --git'
 alias cat='bat'
 alias dotenv='env $(grep -v '^#' .env | xargs)'
 
