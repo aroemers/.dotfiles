@@ -97,7 +97,7 @@
 
 (use-package paredit			; balance, navigate and move parens
   :hook
-  (clojure-mode . paredit-mode)		; enable for clojure
+  (clojure-ts-mode . paredit-mode)	; enable for clojure
   (emacs-lisp-mode . paredit-mode))	; enable for emacs lisp
 
 
