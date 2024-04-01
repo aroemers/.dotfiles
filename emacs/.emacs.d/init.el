@@ -148,3 +148,10 @@
 
 (use-package uniquify			; ensure unique buffer names
   :ensure nil)
+
+(use-package diff-hl			; version control in gutter
+  :config
+  (global-diff-hl-mode)			; enable in all buffers
+
+  (unless window-system			; show in margin in terminal
+    (diff-hl-margin-mode)))
