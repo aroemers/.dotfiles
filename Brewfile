@@ -15,8 +15,8 @@ brew "leiningen"
 # The best editor
 brew "emacs"
 
-# Enhanced replacement of ls
-brew "exa"
+# Replacement for ls
+brew "eza"
 
 # Lua and a Lisp syntax
 brew "lua"
