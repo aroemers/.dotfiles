@@ -57,6 +57,7 @@
   (before-save . delete-trailing-whitespace)
 
   :bind
+  ("C-x f" . recentf-open)
   ("M-o"   . other-window)
   ("M-SPC" . completion-at-point)
   ("C-c b" . my/switch-to-prev-buffer)
