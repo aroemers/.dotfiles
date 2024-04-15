@@ -1,11 +1,6 @@
-## Add sbin path used by brew
+## Don't send analytics with brew
 
-export PATH="/usr/local/sbin:$PATH"
-
-## Load jenv, install using brew
-
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+export HOMEBREW_NO_ANALYTICS="true"
 
 ## Git prompt
 
@@ -34,14 +29,6 @@ export CLICOLOR=1
 ## Aliases
 
 alias ll='ls -l'
-
-## Use own bin directory
-
-export PATH="$HOME/bin:$PATH"
-
-## Don't send analytics with brew
-
-export HOMEBREW_NO_ANALYTICS="true"
 
 ## Fix GPG "inappropriate ioctl for device"
 
