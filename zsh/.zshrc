@@ -1,32 +1,11 @@
-## Uncomment line below and line at bottom of this file to enable profiling.
-
-#zmodload zsh/zprof
-
-
 ## Add sbin path used by brew
 
 export PATH="/usr/local/sbin:$PATH"
-
-
-## Load nvm, install using brew
-
-function load_nvm() {
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-}
 
 ## Load jenv, install using brew
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
-
-## Load rbenv, install using brew
-
-function load_rbenv() {
-  eval "$(rbenv init -)"
-}
-
 
 ## Git prompt
 
@@ -42,52 +21,31 @@ vcs_info_wrapper() {
     fi
 }
 
-
 ## Set clean custom prompt
 
 setopt prompt_subst
-PROMPT='%F{yellow}%3~%f $(vcs_info_wrapper)%(?.🚀.💥) '
+NEWLINE=$'\n'
+PROMPT='$NEWLINE%F{yellow}%2~%f $(vcs_info_wrapper)$NEWLINE%(?.🚀.💥) > '
 
+## Colors in ls
 
-## Load z, install using brew
-
-. /usr/local/etc/profile.d/z.sh
-
-
-## Load atuin, install using brew
-
-export ATUIN_NOBIND="true"
-eval "$(atuin init zsh)"
-bindkey '^r' _atuin_search_widget
-
+export CLICOLOR=1
 
 ## Aliases
 
-alias ll='eza -l --git'
-alias cat='bat'
-alias dotenv='env $(grep -v '^#' .env | xargs)'
-
-
-## Load project specifics
-
-for file in ~/.zsh.d/projects/*.zshrc; do
-    source "$file"
-done
-
+alias ll='ls -l'
 
 ## Use own bin directory
 
 export PATH="$HOME/bin:$PATH"
 
-
 ## Don't send analytics with brew
 
 export HOMEBREW_NO_ANALYTICS="true"
 
-
 ## Fix GPG "inappropriate ioctl for device"
-export GPG_TTY=$(tty)
 
+export GPG_TTY=$(tty)
 
 ## Simple notification for long running tasks
 
@@ -95,7 +53,21 @@ function nd() {
     osascript -e "display notification \"Your task $1 is done\" with title \"Task done\" sound name \"Glass\""
 }
 
+## Save more than default history
 
-## Uncomment line below and line at top of this file to enable profiling
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt SHARE_HISTORY
 
-# zprof
+## Load z, installed with root Brewfile
+source /usr/local/etc/profile.d/z.sh
+
+## Load fzf, installed with root Brewfile
+export FZF_TMUX_OPTS='-p70%'
+eval "$(fzf --zsh)"
+
+## Load scripts in .zsh.d
+
+for file in ~/.zsh.d/*.sh(N); do
+    source "$file"
+done
