@@ -20,7 +20,7 @@ vcs_info_wrapper() {
 
 setopt prompt_subst
 NEWLINE=$'\n'
-PROMPT='$NEWLINE%F{yellow}%2~%f $(vcs_info_wrapper)$NEWLINE%(?.🚀.💥) > '
+PROMPT='$NEWLINE%(?.🚀.💥) %F{yellow}%3~%f $(vcs_info_wrapper)$NEWLINE❯ '
 
 ## Colors in ls
 
