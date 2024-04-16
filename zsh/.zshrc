@@ -47,7 +47,7 @@ export SAVEHIST=10000
 setopt SHARE_HISTORY
 
 ## Load z, installed with root Brewfile
-source /usr/local/etc/profile.d/z.sh
+source "$HOMEBREW_PREFIX/etc/profile.d/z.sh"
 
 ## Load fzf, installed with root Brewfile
 export FZF_TMUX_OPTS='-p70%'
