@@ -1,6 +1,4 @@
-elpa/
-auto-save-list/
-transient/
-history
-projects
-recentf
+*
+!init.el
+!old.el
+!screenshot.png
