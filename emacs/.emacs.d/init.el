@@ -118,11 +118,9 @@
 
 (use-package magit)			; superb git support
 
-(use-package undo-tree			; visual and tracking undo/redo
-  :diminish undo-tree-mode
-  :custom
-  (global-undo-tree-mode t)		; available everywhere
-  (undo-tree-auto-save-history nil))	; don't save undo tree to files
+(use-package vundo			; visual undo/redo
+  :bind
+  ("C-x u" . vundo))
 
 (use-package goto-chg			; move cursor to last change pos
   :bind
