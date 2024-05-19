@@ -88,7 +88,7 @@
 ;;; Clojure programming
 ;;;----------------------------------------------------------------------
 
-(use-package clojure-ts-mode)		; clojure syntax support
+(use-package clojure-mode)		; clojure syntax support
 
 (use-package cider)			; clojure REPL integration
 
@@ -99,7 +99,7 @@
 
 (use-package paredit			; balance, navigate and move parens
   :hook
-  (clojure-ts-mode . paredit-mode)	; enable for clojure
+  (clojure-mode . paredit-mode)		; enable for clojure
   (emacs-lisp-mode . paredit-mode))	; enable for emacs lisp
 
 
