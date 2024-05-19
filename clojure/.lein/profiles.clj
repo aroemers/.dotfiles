@@ -18,4 +18,4 @@
             [lein-cloverage/lein-cloverage "1.2.4"]
 
             ;; Run linting based on clj-kondo
-            [com.github.clj-kondo/lein-clj-kondo "0.2.4"]]}}
+            [com.github.clj-kondo/lein-clj-kondo "2024.03.13"]]}}
