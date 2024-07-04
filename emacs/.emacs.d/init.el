@@ -154,3 +154,15 @@
 
   (unless window-system			; show in margin in terminal
     (diff-hl-margin-mode)))
+
+(use-package avy			; quick navigation on screen
+  :bind
+  ("M-j" . avy-goto-char-timer))
+
+;; Package which-key is incompatible with devil mode.
+;; There is a PR here: https://github.com/justbur/emacs-which-key/pull/353.
+;; It won't be merged, as which-key will (probably) be part of Emacs 30.
+;; Perhaps the incompatibility will solved then.
+(use-package devil			; shortcuts using ,
+  :config
+  (global-devil-mode))
