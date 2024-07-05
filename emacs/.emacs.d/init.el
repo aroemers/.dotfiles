@@ -51,6 +51,7 @@
   (recentf-mode t)			; remember recently opened files
   (savehist-mode t)			; save history of commands
   (show-paren-mode t)			; highlight matching parens
+  (global-hl-line-mode t)		; highlight current line
 
   (when window-system
     (scroll-bar-mode -1)		; hide scroll bar
