@@ -71,7 +71,6 @@
   :bind
   ("C-x f" . recentf-open)
   ("M-o"   . other-window)
-  ("M-SPC" . completion-at-point)
   ("C-c b" . my/switch-to-prev-buffer)
   ("C-c i" . my/open-emacs-init))
 
