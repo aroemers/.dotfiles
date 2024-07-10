@@ -81,7 +81,17 @@
 
 (use-package scala-mode)		; scala syntax support
 
-(use-package eglot)			; built-in LSP integration
+(use-package eglot			; built-in LSP integration
+  :bind
+  (:map eglot-mode-map
+   ("C-c c a" . eglot-code-actions)
+   ("C-c c o" . eglot-code-action-organize-imports)
+   ("C-c c r" . eglot-rename)
+   ("C-c c f" . eglot-format))
+  (:map flymake-mode-map
+   ("C-c ! n" . flymake-goto-next-error)
+   ("C-c ! p" . flymake-goto-prev-error)
+   ("C-c ! l" . flymake-show-diagnostics-buffer)))
 
 
 ;;;----------------------------------------------------------------------
