@@ -60,8 +60,10 @@
     (tool-bar-mode -1))			; hide tool bar
 
   :custom
+  (completion-auto-select t)		; instant active completion buffer
   (inhibit-startup-screen t)		; no emacs startup buffer
   (interprogram-cut-function 'my/copy-to-osx) ; integrate macOS clipboard
+  (tab-always-indent 'complete)		; complete-at-point if already indented
   (warning-minimum-level :error)	; don't pop up warning buffer
   (word-wrap t)				; nicely word wrap
 
