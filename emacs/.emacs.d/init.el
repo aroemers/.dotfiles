@@ -69,6 +69,7 @@
 
   :hook
   (before-save . delete-trailing-whitespace)
+  (compilation-filter-hook . ansi-color-compilation-filter)
 
   :bind
   ("C-x f" . recentf-open)
