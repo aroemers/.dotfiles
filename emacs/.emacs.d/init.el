@@ -69,7 +69,7 @@
 
   :hook
   (before-save . delete-trailing-whitespace)
-  (compilation-filter-hook . ansi-color-compilation-filter)
+  (compilation-filter . ansi-color-compilation-filter)
 
   :bind
   ("C-x f" . recentf-open)
@@ -141,8 +141,12 @@
 
 (use-package which-key			; show shortcuts that can follow
   :diminish which-key-mode
+
   :config
-  (which-key-mode))
+  (which-key-mode)
+
+  :custom
+  (which-key-idle-delay 0.5))
 
 (use-package exec-path-from-shell	; ensure path is read from shell
   :defer 1)
@@ -169,8 +173,13 @@
     (diff-hl-margin-mode)))
 
 (use-package avy			; quick navigation on screen
+  :custom
+  (avy-keys '(?a ?r ?s ?t ?n ?e ?i ?o))	; colemak home row
+  (avy-style 'pre)			; path before matches
+
   :bind
-  ("M-j" . avy-goto-char-timer))
+  ("M-j"   . avy-goto-char-timer)
+  ("M-g j" . avy-goto-line))
 
 ;; Package which-key is incompatible with devil mode.
 ;; There is a PR here: https://github.com/justbur/emacs-which-key/pull/353.
