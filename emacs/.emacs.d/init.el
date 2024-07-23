@@ -11,11 +11,6 @@
 ;;; Custom functions
 ;;;----------------------------------------------------------------------
 
-(defun my/switch-to-prev-buffer ()
-  "Switch to the previously active buffer."
-  (interactive)
-  (switch-to-buffer (other-buffer (current-buffer) nil)))
-
 (defun my/open-emacs-init ()
   "Open init.el quickly for editing."
   (interactive)
@@ -76,7 +71,7 @@
   :bind
   ("C-x f" . recentf-open)
   ("M-o"   . other-window)
-  ("C-c b" . my/switch-to-prev-buffer)
+  ("C-c b" . mode-line-other-buffer)
   ("C-c i" . my/open-emacs-init)
 
   (:map prog-mode-map
