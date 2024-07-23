@@ -66,6 +66,7 @@
   (tab-always-indent 'complete)		; complete-at-point if already indented
   (warning-minimum-level :error)	; don't pop up warning buffer
   (word-wrap t)				; nicely word wrap
+  (backward-delete-char-untabify-method 'hungry) ; remove tabs and spaces on backspace
 
   :hook
   (before-save . delete-trailing-whitespace)
@@ -75,7 +76,10 @@
   ("C-x f" . recentf-open)
   ("M-o"   . other-window)
   ("C-c b" . my/switch-to-prev-buffer)
-  ("C-c i" . my/open-emacs-init))
+  ("C-c i" . my/open-emacs-init)
+
+  (:map prog-mode-map
+   ("DEL" . backward-delete-char-untabify)))
 
 
 ;;;----------------------------------------------------------------------
