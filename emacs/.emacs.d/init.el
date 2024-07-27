@@ -91,6 +91,8 @@
 
 (use-package eglot			; built-in LSP integration
   :bind
+  ("M->" . xref-find-apropos)
+
   (:map eglot-mode-map
    ("C-c c a" . eglot-code-actions)
    ("C-c c o" . eglot-code-action-organize-imports)
