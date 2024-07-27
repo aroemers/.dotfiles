@@ -22,6 +22,11 @@
       (process-send-string proc text)
       (process-send-eof proc))))
 
+(defun my/project-ztree ()
+  "Open ztree at project root."
+  (interactive)
+  (ztree-dir (project-root (project-current t))))
+
 
 ;;;----------------------------------------------------------------------
 ;;; Package management setup
@@ -188,3 +193,8 @@
 (use-package devil			; shortcuts using ,
   :config
   (global-devil-mode))
+
+(use-package ztree			; file tree navigation
+  :bind
+  (:map project-prefix-map
+   ("t" . my/project-ztree)))
