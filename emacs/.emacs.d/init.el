@@ -97,7 +97,8 @@
    ("C-c c a" . eglot-code-actions)
    ("C-c c o" . eglot-code-action-organize-imports)
    ("C-c c r" . eglot-rename)
-   ("C-c c f" . eglot-format))
+   ("C-c c f" . eglot-format)
+   ("C-c c i" . eglot-find-implementation))
   (:map flymake-mode-map
    ("C-c ! n" . flymake-goto-next-error)
    ("C-c ! p" . flymake-goto-prev-error)
