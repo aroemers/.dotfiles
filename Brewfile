@@ -1,6 +1,3 @@
-# CLI encryption tool
-brew "age"
-
 # Fuzzy finder
 brew "fzf"
 
