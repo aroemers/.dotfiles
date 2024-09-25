@@ -61,6 +61,7 @@
     (tool-bar-mode -1))			; hide tool bar
 
   :custom
+  (compilation-scroll-output t)		; auto-scroll *compilation* buffer
   (completion-auto-select t)		; instant active completion buffer
   (inhibit-startup-screen t)		; no emacs startup buffer
   (interprogram-cut-function 'my/copy-to-osx) ; integrate macOS clipboard
