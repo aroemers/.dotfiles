@@ -115,12 +115,22 @@
 
 
 ;;;----------------------------------------------------------------------
-;;; Lisp programming (Clojure, Emacs Lisp)
+;;; Common Lisp programming
+;;;----------------------------------------------------------------------
+
+(use-package slime
+  :init
+  (setq inferior-lisp-program "sbcl"))
+
+
+;;;----------------------------------------------------------------------
+;;; Lisp programming (Clojure, Common Lisp, Emacs Lisp)
 ;;;----------------------------------------------------------------------
 
 (use-package paredit			; balance, navigate and move parens
   :hook
   (clojure-mode . paredit-mode)		; enable for clojure
+  (lisp-mode . paredit-mode)		; enable for common lisp
   (emacs-lisp-mode . paredit-mode))	; enable for emacs lisp
 
 
