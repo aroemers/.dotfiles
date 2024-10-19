@@ -76,7 +76,6 @@
 
   :bind
   ("C-x f" . recentf-open)
-  ("M-o"   . other-window)
   ("C-c b" . mode-line-other-buffer)
   ("C-c i" . my/open-emacs-init)
 
@@ -202,3 +201,7 @@
   :bind
   (:map project-prefix-map
    ("t" . my/project-ztree)))
+
+(use-package ace-window			; other-window, but with numbers
+  :bind
+  ("M-o" . ace-window))
