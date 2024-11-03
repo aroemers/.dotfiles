@@ -27,6 +27,16 @@
   (interactive)
   (ztree-dir (project-root (project-current t))))
 
+(defun my/toggle-zoom ()
+  "Zoom active window or restore windows before zoom."
+  (interactive)
+  (if (get-register ?Z)
+      (save-excursion
+	(jump-to-register ?Z)
+	(set-register ?Z nil))
+    (progn (window-configuration-to-register ?Z)
+	   (delete-other-windows))))
+
 
 ;;;----------------------------------------------------------------------
 ;;; Package management setup
@@ -78,6 +88,7 @@
   ("C-x f" . recentf-open)
   ("C-c b" . mode-line-other-buffer)
   ("C-c i" . my/open-emacs-init)
+  ("C-x z" . my/toggle-zoom)
 
   (:map prog-mode-map
    ("DEL" . backward-delete-char-untabify)))
@@ -118,7 +129,7 @@
 ;;; Common Lisp programming
 ;;;----------------------------------------------------------------------
 
-(use-package slime
+(use-package slime			; common lisp support
   :init
   (setq inferior-lisp-program "sbcl"))
 
