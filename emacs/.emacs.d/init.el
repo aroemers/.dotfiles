@@ -63,6 +63,8 @@
   (show-paren-mode t)			; highlight matching parens
   (global-hl-line-mode t)		; highlight current line
   (electric-pair-mode t)		; automatic closing parens
+  (save-place-mode t)			; save last location in files
+  (tab-bar-mode t)			; frame tabs
 
   (when window-system
     (scroll-bar-mode -1)		; hide scroll bar
