@@ -82,6 +82,8 @@
   (warning-minimum-level :error)	; don't pop up warning buffer
   (word-wrap t)				; nicely word wrap
   (backward-delete-char-untabify-method 'hungry) ; remove tabs and spaces on backspace
+  (tab-bar-tab-hints 1)			; show tab numbers
+  (tab-bar-close-button-show nil)	; hide tab close button
 
   :hook
   (before-save . delete-trailing-whitespace)
