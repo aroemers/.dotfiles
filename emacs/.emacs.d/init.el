@@ -84,6 +84,7 @@
   (backward-delete-char-untabify-method 'hungry) ; remove tabs and spaces on backspace
   (tab-bar-tab-hints 1)			; show tab numbers
   (tab-bar-close-button-show nil)	; hide tab close button
+  (dired-listing-switches "-alh")	; human readable file sizes in dired
 
   :hook
   (before-save . delete-trailing-whitespace)
