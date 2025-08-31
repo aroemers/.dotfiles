@@ -245,3 +245,7 @@
 (use-package ace-window			; other-window, but with numbers
   :bind
   ("M-o" . ace-window))
+
+(use-package eat			; emulate a terminal
+  :custom
+  (eat-term-name "xterm-256color"))	; fix backspace
