@@ -70,7 +70,8 @@
   (when window-system
     (scroll-bar-mode -1)		; hide scroll bar
     (set-face-font 'default "SF Mono 15") ; set font and size
-    (toggle-frame-maximized)		; maximize frame
+    ;(toggle-frame-maximized)		; maximize frame
+    (set-frame-size nil 200 60)		; set default frame size
     (tool-bar-mode -1))			; hide tool bar
 
   :custom
