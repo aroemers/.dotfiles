@@ -66,11 +66,12 @@
   (electric-pair-mode t)		; automatic closing parens
   (save-place-mode t)			; save last location in files
   (tab-bar-mode t)			; frame tabs
+  (global-completion-preview-mode t)	; inline completion suggestion
 
   (when window-system
-    (scroll-bar-mode -1)		; hide scroll bar
-    (set-face-font 'default "SF Mono 15") ; set font and size
-    ;(toggle-frame-maximized)		; maximize frame
+    (scroll-bar-mode -1)		  ; hide scroll bar
+    (set-face-font 'default "Menlo 15") ; set font and size
+    ;;(toggle-frame-maximized)		; maximize frame
     (set-frame-size nil 200 60)		; set default frame size
     (tool-bar-mode -1))			; hide tool bar
 
@@ -165,12 +166,24 @@
 ;;; RSS feeds
 ;;;----------------------------------------------------------------------
 
-(use-package elfeed
+(use-package elfeed			; rss reader
   :vc (:url "https://github.com/skeeto/elfeed.git" :rev "3.4.2")
 
   :custom
   (elfeed-feeds '("https://planet.clojure.in/atom.xml"
-		  "https://planet.emacslife.com/atom.xml")))
+                  "https://planet.emacslife.com/atom.xml"
+                  "https://lobste.rs/rss")))
+
+
+;;;----------------------------------------------------------------------
+;;; Browsing, eww!
+;;;----------------------------------------------------------------------
+
+(use-package eww			; emacs text based browser
+  :custom
+  (eww-search-prefix "https://www.ecosia.org/search?q="))
+
+(use-package elpher)			; gemini browser
 
 
 ;;;----------------------------------------------------------------------
