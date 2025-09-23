@@ -86,6 +86,7 @@
   (tab-bar-tab-hints 1)			; show tab numbers
   (tab-bar-close-button-show nil)	; hide tab close button
   (dired-listing-switches "-alh")	; human readable file sizes in dired
+  (xref-search-program 'ripgrep)	; use ripgrep for searching
 
   :hook
   (before-save . delete-trailing-whitespace)
