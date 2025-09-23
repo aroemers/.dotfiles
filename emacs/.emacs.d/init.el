@@ -65,7 +65,6 @@
   (global-hl-line-mode t)		; highlight current line
   (electric-pair-mode t)		; automatic closing parens
   (save-place-mode t)			; save last location in files
-  (tab-bar-mode t)			; frame tabs
   (global-completion-preview-mode t)	; inline completion suggestion
 
   (when window-system
