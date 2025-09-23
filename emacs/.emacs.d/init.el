@@ -56,7 +56,7 @@
   (column-number-mode t)	        ; show column number in mode-line
   (fido-vertical-mode t)	        ; visual minibuffer completion
   (global-auto-revert-mode t)	        ; auto-revert files from disk
-  (load-theme 'modus-operandi-tinted t)	; set theme
+  (load-theme 'modus-vivendi t)		; set theme
   (set-face-attribute 'tab-bar nil :inherit 'mode-line)	; match tab-bar with theme
   (menu-bar-mode -1)			; hide menu bar
   (recentf-mode t)			; remember recently opened files
