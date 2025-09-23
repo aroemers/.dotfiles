@@ -172,7 +172,8 @@
   :custom
   (elfeed-feeds '("https://planet.clojure.in/atom.xml"
                   "https://planet.emacslife.com/atom.xml"
-                  "https://lobste.rs/rss")))
+                  "https://lobste.rs/rss"
+                  "https://www.supergiantgames.com/feed.xml")))
 
 
 ;;;----------------------------------------------------------------------
