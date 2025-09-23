@@ -69,7 +69,7 @@
 
   (when window-system
     (scroll-bar-mode -1)		  ; hide scroll bar
-    (set-face-font 'default "Menlo 15") ; set font and size
+    (set-face-font 'default "JetBrains Mono 15") ; set font and size
     ;;(toggle-frame-maximized)		; maximize frame
     (set-frame-size nil 200 60)		; set default frame size
     (tool-bar-mode -1))			; hide tool bar
