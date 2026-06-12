@@ -8,4 +8,4 @@ brew "git"
 brew "stow"
 
 # Jump to visited directories in shell
-brew "z"
+brew "zoxide"

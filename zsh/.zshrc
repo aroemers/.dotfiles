@@ -47,14 +47,14 @@ export SAVEHIST=10000
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 
-## Load z, installed with root Brewfile
-
-source "$HOMEBREW_PREFIX/etc/profile.d/z.sh"
-
 ## Load fzf, installed with root Brewfile
 
 export FZF_TMUX_OPTS='-p70%'
 eval "$(fzf --zsh)"
+
+## Load zoxide, installed with root Brewfile
+
+eval "$(zoxide init zsh)"
 
 ## Load scripts in .zsh.d
 
