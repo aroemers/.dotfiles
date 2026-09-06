@@ -197,7 +197,10 @@
 ;;; Utility packages
 ;;;----------------------------------------------------------------------
 
-(use-package magit)			; superb git support
+(use-package magit			; superb git support
+  :config
+  (magit-add-section-hook 'magit-status-sections-hook ; show worktrees
+			  #'magit-insert-worktrees nil t))
 
 (use-package vundo			; visual undo/redo
   :bind
