@@ -66,6 +66,7 @@
   (electric-pair-mode t)		; automatic closing parens
   (save-place-mode t)			; save last location in files
   (global-completion-preview-mode t)	; inline completion suggestion
+  (xterm-mouse-mode t)			; enable mouse navigation
 
   (when window-system
     (scroll-bar-mode -1)		  ; hide scroll bar
@@ -97,6 +98,8 @@
   ("C-c b" . mode-line-other-buffer)
   ("C-c i" . my/open-emacs-init)
   ("C-x z" . my/toggle-zoom)
+  ("<wheel-down>" . scroll-up-line)
+  ("<wheel-up>" . scroll-down-line)
 
   (:map prog-mode-map
    ("DEL" . backward-delete-char-untabify)))
