@@ -1,5 +1,5 @@
 nerdfont: true
-agent: claude
+agent: claude --permission-mode auto
 
 panes:
   - command: <agent>
